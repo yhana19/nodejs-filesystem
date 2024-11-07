@@ -33,8 +33,11 @@ This project provides an API for creating timestamped log files and reading the 
 ## Code Explanation
 
 **server.js**: The main server file. It sets up the Express app, handles the routes, and interacts with the file system to create and list files.
+
 **logEvents function**: Creates a new file with the current timestamp when called, and saves it to the logs directory.
+
 **/create-file**: This POST route triggers the logEvents function to create a new log file.
+
 **/files**: This GET route reads the logs folder and returns a list of .txt files stored there.
 
 ## Deployment
