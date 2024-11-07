@@ -27,8 +27,9 @@ const logEvents = async () => {
     console.error("Error creating log file:", error);
   }
 };
+
 app.post("/create-file", async (req, res) => {
-  await logEvents(); 
+  await logEvents();
   res.status(201).json({ message: "File created with timestamp" });
 });
 
@@ -38,13 +39,13 @@ app.get("/files", (req, res) => {
       console.error("Error reading directory:", err);
       return res.status(500).json({ error: "Failed to read directory" });
     }
-    
-    
+
     const textFiles = files.filter(file => path.extname(file) === ".txt");
     res.status(200).json({ files: textFiles });
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
