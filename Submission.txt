@@ -1,7 +1,0 @@
-Base URL: https://nodejs-filesystem-1-wbs9.onrender.com
-
-POST /create-file: https://nodejs-filesystem-1-wbs9.onrender.com/create-file
-
-GET /files: https://nodejs-filesystem-1-wbs9.onrender.com/files
-
-Github URL : https://github.com/rubikakumar/nodejs-filesystem.git
